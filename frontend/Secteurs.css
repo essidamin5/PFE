@@ -1,0 +1,20 @@
+.secteurs {
+  background: #f5f5f5;
+  padding: 80px;
+  text-align: center;
+}
+
+.secteurs h2 {
+  margin-bottom: 40px;
+}
+
+.secteur {
+  padding: 30px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.secteur:hover {
+  background: black;
+  color: white;
+}

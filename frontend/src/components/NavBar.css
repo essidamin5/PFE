@@ -1,0 +1,116 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(55, 84, 104, 0.6);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== CONTAINER ===== */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+}
+
+/* ===== LOGO ===== */
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: rgb(23, 22, 22);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ===== MENU ===== */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  list-style: none; /* 🔥 ينحي النقاط */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+/* ===== LINKS ===== */
+.nav-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  color: #cce7ff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+
+  position: relative;
+  transition: 0.3s;
+}
+
+/* hover color */
+.nav-link:hover {
+  color: #62b6cb;
+}
+
+/* underline effect */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: linear-gradient(90deg, #62b6cb, #5fa8d3);
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== BUTTON NAV ===== */
+.btn-nav {
+  background: linear-gradient(135deg, #62b6cb, #5fa8d3);
+  padding: 10px 18px;
+  border-radius: 12px;
+  color: rgb(159, 63, 63) !important;
+
+  box-shadow: 0 5px 15px rgba(98,182,203,0.4);
+  transition: 0.3s;
+}
+
+/* button hover */
+.btn-nav:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(98,182,203,0.6);
+}
+
+/* remove underline from button */
+.btn-nav::after {
+  display: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+}

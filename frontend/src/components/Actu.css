@@ -1,0 +1,83 @@
+/* SECTION */
+.actu {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fbff, #eef6ff);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #1b4965;
+  font-weight: 700;
+}
+
+/* GRID */
+.actu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD MODERN */
+.actu-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.4s;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGE */
+.actu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.actu-card h3 {
+  padding: 20px 20px 10px;
+  font-size: 20px;
+  color: #1b4965;
+}
+
+.actu-card p {
+  padding: 0 20px 20px;
+  color: #555;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* HOVER 🔥 */
+.actu-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* subtle gradient border effect */
+.actu-card::before {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #62b6cb, #5fa8d3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .actu-grid {
+    grid-template-columns: 1fr;
+  }
+}

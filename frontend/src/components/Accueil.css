@@ -1,0 +1,146 @@
+/* ===== GLOBAL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 85vh;
+
+  background: url("be_carthai_cover.jpeg") no-repeat center center;
+  background-size: cover;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* gradient overlay ✨ (أخف و modern أكثر) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.45),
+    rgba(0, 0, 0, 0.65)
+  );
+  backdrop-filter: blur(2px);
+}
+
+/* subtle glow effect */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent);
+  top: -150px;
+  right: -150px;
+}
+
+/* content */
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 2;
+
+  max-width: 700px;
+  padding: 0 20px;
+
+  animation: fadeUp 1s ease;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero-content b {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  padding: 10px 2px;
+  background: linear-gradient(135deg, #f8fbff, #eef6ff);
+}
+
+.about-section h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 42px;
+  color: #0e0f10;
+  font-weight: 700;
+}
+
+/* card modern glass ✨ */
+.about-card {
+  max-width: 900px;
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+
+  border-radius: 24px;
+  padding: 40px;
+
+  box-shadow: 0 20px 50px rgba(0, 123, 255, 0.08);
+
+  line-height: 1.9;
+  color: #444;
+  font-size: 1.05rem;
+  text-align: justify;
+
+  transition: 0.3s ease;
+}
+
+/* hover subtle effect */
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 70px rgba(0, 123, 255, 0.12);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content b {
+    font-size: 14px;
+  }
+
+  .about-card {
+    padding: 15px;
+  }
+
+  .about-section h1 {
+    font-size: 30px;
+  }
+}

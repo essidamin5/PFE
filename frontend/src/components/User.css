@@ -1,0 +1,34 @@
+.users-container {
+  padding: 30px;
+  color: white;
+}
+
+.search {
+  margin: 20px 0;
+  padding: 10px;
+  width: 300px;
+  border-radius: 8px;
+  border: none;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.users-table th {
+  background: #1e293b;
+  padding: 12px;
+}
+
+.users-table td {
+  padding: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.users-table tr:hover {
+  background: #1e293b;
+}

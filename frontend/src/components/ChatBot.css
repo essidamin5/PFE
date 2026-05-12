@@ -1,0 +1,144 @@
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+/* BUTTON */
+.chat-toggle {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-size: 22px;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* BOX */
+.chat-box {
+  width: 320px;
+  height: 480px;
+  background: #020617;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* HEADER */
+.chat-header {
+  padding: 15px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* MESSAGES */
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* MSG */
+.msg {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 80%;
+  animation: fadeIn 0.3s ease;
+}
+
+.msg.bot {
+  background: #1e293b;
+}
+
+.msg.user {
+  background: #6366f1;
+  margin-left: auto;
+}
+
+/* TYPING */
+.typing {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* INPUT */
+.chat-input {
+  display: flex;
+  padding: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.chat-input button {
+  margin-left: 5px;
+  padding: 8px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  border-radius: 8px;
+}
+
+/* OPTIONS */
+.chat-options {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.chat-options button {
+  margin: 5px 0;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-options button:hover {
+  background: #6366f1;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.chat-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chat-options button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-options button:hover {
+  background: #6366f1;
+}

@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #0A192F;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+/* 🔥 LINKS (NavLink) */
+.sidebar a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: #1f4068;
+  color: white;
+}
+
+/* ACTIVE */
+.sidebar a.active {
+  background: #2563eb;
+  color: white;
+}
+
+/* BUTTONS */
+.sidebar button {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 30px;
+  background: #f5f7fa;
+}
+
+/* HEADER */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* USER INFO */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* PROFILE */
+.profile {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  width: 320px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.avatar {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.avatar img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* CHART */
+.chart {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* TABLE */
+.table {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background: #f1f5f9;
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark .main {
+  background: #121212;
+}
+
+.dark .card,
+.dark .profile,
+.dark .table,
+.dark .chart {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark .sidebar {
+  background: #0f172a;
+}
+
+.dark .sidebar a {
+  color: #aaa;
+}
+
+.dark .sidebar a.active {
+  background: #3b82f6;
+}
+
+.dark tr:hover {
+  background: #2a2a2a;
+}
+/* ===== PROFILE MODERN FIX ===== */
+.profile-modern {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* LEFT IMAGE */
+.profile-left {
+  text-align: center;
+}
+
+.profile-left img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #62b6cb;
+  object-fit: cover;
+}
+
+/* BUTTON */
+.upload-btn {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #62b6cb;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* RIGHT */
+.profile-right {
+  flex: 1;
+}
+
+/* FIELDS */
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  font-weight: 600;
+  color: #111;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+}
+
+/* BUTTONS */
+.actions {
+  margin-top: 15px;
+}
+
+.edit-btn,
+.save-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.save-btn {
+  background: #10b981;
+  color: white;
+}
+/* ===== DARK MODE PROFILE FIX ===== */
+.dark .profile-modern {
+  background: #1e1e1e;
+}
+
+.dark .field label {
+  color: #e5e5e5;
+}
+
+.dark .field input {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+/* upload button */
+.dark .upload-btn {
+  background: #3b82f6;
+}
+
+/* buttons */
+.dark .edit-btn {
+  background: #3b82f6;
+}
+
+.dark .save-btn {
+  background: #22c55e;
+}

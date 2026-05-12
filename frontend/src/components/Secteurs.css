@@ -1,0 +1,134 @@
+/* SECTION */
+.secteurs {
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #f8fbff, #eef6ff);
+  text-align: center;
+}
+
+/* TITLE */
+.title {
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #1b4965;
+}
+
+/* GRID */
+.secteurs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.secteur-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  
+}
+
+.secteur-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* IMAGE */
+.secteur-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* HOVER EFFECT */
+.secteur-card:hover img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.overlay h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ACTIVE CARD 🔥 */
+.secteur-card.active {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,123,255,0.25);
+}
+
+/* DESCRIPTION */
+.secteur-desc {
+  margin-top: 50px;
+  font-size: 18px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  color: #444;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .secteurs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .secteurs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.secteur-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* ✨ hover */
+.secteur-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✅ ACTIVE */
+.secteur-card.active {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+  border: 2px solid #62b6cb;
+}
+
+/* overlay lighter */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

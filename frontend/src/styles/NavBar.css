@@ -1,0 +1,106 @@
+.navbar {
+  background-color: #65adf5;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-logo a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo a:hover {
+  color: #3498db;
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+  border-radius: 40px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo a:hover img {
+  transform: scale(1.05);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+/* Style unifié pour liens ET boutons */
+.nav-link,
+button.nav-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: inherit;
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.nav-link:hover,
+button.nav-link:hover {
+  color: #3498db;
+}
+
+/* Bouton Connexion */
+.nav-link.login-btn {
+  background-color: #fbfcfd;
+  color: rgb(157, 123, 225);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link.login-btn:hover {
+  background-color:rgb(157, 123, 225);;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

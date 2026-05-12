@@ -1,0 +1,95 @@
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #3c74be, #557faf);
+}
+
+.register-box {
+  background: rgba(18, 172, 244, 0.08);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  text-align: center;
+  color: rgb(252, 250, 250);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.register-box h1 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  color: #eff2f6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+   color: #030303;
+}
+
+form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+   color: #0c0c0c;
+}
+
+.btn-register {
+  background: linear-gradient(135deg, #62b6cb, #5fa8d3);
+  color: rgb(8, 7, 7);
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-register:hover {
+  transform: scale(1.05);
+}
+
+/* messages */
+.msg {
+  margin-bottom: 10px;
+  font-size: 14px;
+  
+}
+
+/* links */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link-btn {
+  text-decoration: none;
+  color: #e9eeee;
+  font-size: 14px;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}
+
+.link-btn.home {
+  color: #000c06;
+}
+/* placeholder color */
+form input::placeholder {
+  color: black;
+}
+
+form textarea::placeholder {
+  color: black;
+}
